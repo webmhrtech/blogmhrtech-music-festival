@@ -1,0 +1,25 @@
+{
+  "name": "blogmhrtech-music-festival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blogmhrtech/blogmhrtech-music-festival.git"
+  },
+  "author": "blogmhrtech - Melquiades Hdez Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blogmhrtech/blogmhrtech-music-festival/issues"
+  },
+  "homepage": "https://github.com/blogmhrtech/blogmhrtech-music-festival#readme",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.1"
+  }
+}
