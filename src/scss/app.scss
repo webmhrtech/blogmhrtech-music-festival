@@ -1,5 +1,2 @@
-$color:blue;
-
-* {
-    background-color: $color;
-}
+@use 'base';
+@use 'layout';
