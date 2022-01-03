@@ -1,8 +1,9 @@
 const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const plumber = require('gulp-plumber');
 
 /* ==================== EXAMPLE FOR TASKS
-function myTask(done){
+function myTask(done)
     console.log("The first task...");
     done();
 }
@@ -16,6 +17,7 @@ NOTE: WE CAN HAVE MANY TASKS
 
 function taskCSS(done){
     src('src/scss/**/*.scss') // Identify the .scss file that I am going to use
+        .pipe(plumber())
         .pipe( sass() ) // Compile file
         .pipe( dest('build/css') ); // Save file to hard disk
 
@@ -25,6 +27,7 @@ function taskCSS(done){
 
 function taskWatch(done) {
 
+    /* watch ('file that listens', the calling function) */
     watch('src/scss/**/*.scss', taskCSS);
     console.log("Task for watch...");
     done();
