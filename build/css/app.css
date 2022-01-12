@@ -386,6 +386,18 @@ h3 {
   font-size: 3rem;
 }
 
-* {
-  background-color: #ffffff;
+.header {
+  background-color: #66ff66;
+}
+.header h1 {
+  color: #ffffff;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 2.4rem;
+}
+.main-nav a:hover {
+  /* & remove white space */
+  color: #ffff4d;
 }
