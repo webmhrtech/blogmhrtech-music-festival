@@ -1,8 +1,12 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .header {
-    background-color: v.$green;
 
+    // @include m.background-test; // Example with mixin scss
+    
+    background-color: v.$green;
+    
     h1 {
         color: v.$white;
     }
