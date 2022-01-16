@@ -453,7 +453,7 @@ h3 {
   position: absolute;
   background: #7e02c3;
   background: linear-gradient(270deg, rgba(126, 2, 195, 0.5) 0%, rgba(255, 0, 110, 0.3) 100%);
-  height: 85%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -474,7 +474,7 @@ h3 {
 }
 .contain-video h2 {
   color: #ffffff;
-  font-size: 7rem;
+  font-size: 6rem;
   margin: 0;
 }
 .contain-video p {
@@ -485,4 +485,34 @@ h3 {
   font-weight: 700;
   font-size: 2.4rem;
   margin: 0;
+}
+
+.about-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .about-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.container-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .container-festival {
+    margin-top: 0;
+  }
+}
+.container-festival h2 {
+  margin-bottom: 2rem;
+}
+.container-festival .date {
+  color: #ff9999;
+  font-weight: 700;
 }
