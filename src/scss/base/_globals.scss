@@ -13,6 +13,11 @@ html {
 body {
     font-family: v.$main_font;
     font-size: 1.6rem;
+
+    // fixed-body: is created when you open an image from the gallery
+    &.fixed-body { // I can't scroll until I close the gallery image
+        overflow: hidden;
+    }
 }
 
 p {
@@ -39,4 +44,11 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }

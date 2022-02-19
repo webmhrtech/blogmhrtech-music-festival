@@ -1,5 +1,6 @@
+const { src, dest, watch, parallel } = require('gulp');
+
 // CSS
-const { src, dest, watch, parallel, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
 
@@ -7,8 +8,8 @@ const plumber = require('gulp-plumber');
 const cache = require('gulp-cache');
 
 /* npm install --save-dev gulp-imagemin@7.1.0  THIS VERSION WORKS !!! */
-//const imagemin = require('gulp-imagemin');
-//const webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
 /* ==================== EXAMPLE FOR TASKS
@@ -35,7 +36,7 @@ function taskCSS(done){
 }
 
 /* npm install --save-dev gulp-imagemin@7.1.0  THIS VERSION WORKS !!! */
-function taskImages(done) {
+function taskImages( done ) {
     const op = {
         optimizationLevel: 3
     }
@@ -65,17 +66,26 @@ function taskAvif( done ) {
     done();
 }
 
+function taskJS(done) {
+    src('src/js/**/*.js', taskJS)
+        .pipe(dest('./build/js'))
+
+    done();    
+}
+
 function taskWatch(done) {
 
     /* watch ('file that listens', the calling function) */
     watch('src/scss/**/*.scss', taskCSS);
+    watch('src/js/**/*.js', taskJS);
     console.log("Task for watch...");
     done();
 }
 
 exports.taskCSS = taskCSS; 
-//exports.taskImages = taskImages;
-//exports.taskWebp = taskWebp;
+exports.taskJS = taskJS;
+exports.taskImages = taskImages;
+exports.taskWebp = taskWebp;
 exports.taskAvif = taskAvif;
 exports.taskWatch = taskWatch;
-//exports.taskWatch = parallel ( taskCSS,taskImages,taskWebp,taskAvif,taskWatch );
+exports.taskWatch = parallel ( taskImages,taskWebp,taskAvif,taskJS,taskWatch );

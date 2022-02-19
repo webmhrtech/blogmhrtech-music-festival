@@ -359,6 +359,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fixed-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -390,6 +393,13 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .header {
@@ -515,4 +525,145 @@ h3 {
 .container-festival .date {
   color: #ff9999;
   font-weight: 700;
+}
+
+.lineup {
+  background-color: #ff9999;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #ffffff;
+}
+.lineup .day {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .container-stage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.container-stage p {
+  color: #000000;
+}
+
+.stage {
+  padding-top: 2rem;
+}
+.stage .name-stage:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .name-stage:after {
+  background-image: url(../img/icon_edm.png);
+}
+
+.rock .name-stage:after {
+  background-image: url(../img/icon_rock.png);
+}
+
+.calendar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendar li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendar li span {
+  font-weight: 400;
+}
+
+.bg-yellow {
+  background-color: #ffff4d;
+}
+.bg-yellow li:nth-child(odd) {
+  background-color: #ffff01;
+}
+
+.bg-green {
+  background-color: #51e03e;
+}
+.bg-green li:nth-child(odd) {
+  background-color: #34ca21;
+}
+
+.gallery {
+  padding: 5rem 0;
+}
+.gallery h3 {
+  text-align: center;
+}
+
+.gallery-images {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay picture {
+  display: block;
+  max-width: 80rem;
+}
+
+.btn-close {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.btn-close:hover {
+  cursor: pointer;
 }
