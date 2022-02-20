@@ -667,3 +667,65 @@ img {
 .btn-close:hover {
   cursor: pointer;
 }
+
+.tiquets {
+  padding: 5rem 0;
+  background-color: #666bff;
+}
+.tiquets h3 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .tiquets .container-tiquets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pass {
+  color: black;
+}
+.pass .name-pass {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+.pass-header, .pass-footer {
+  padding: 0.5rem;
+}
+.pass-header p, .pass-footer p {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+.pass-header {
+  background-color: #ff66b3;
+}
+.pass-header p {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.pass-body {
+  background-color: #ffffff;
+}
+.pass-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pass-body ul li,
+.pass-body ul :nth-child(odd) {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pass-footer {
+  background-color: #ff66b3;
+}
+.pass-footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
