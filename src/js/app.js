@@ -3,7 +3,42 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initApp() {
+    navFixed();
     createGallery();
+    scrollNav();
+}
+
+// Set the scroll bar to a certain position
+function navFixed() {
+    const bar = document.querySelector('.header');
+    const aboutFestival = document.querySelector('.about-festival');
+    const body = document.querySelector('body');
+
+
+    window.addEventListener('scroll', function() {
+        if( aboutFestival.getBoundingClientRect().bottom < 0  ) {
+            bar.classList.add('fixed-bar');
+            body.classList.add('body-scroll');
+        } else {
+            bar.classList.remove('fixed-bar');
+            body.classList.remove('body-scroll');
+        }
+    });
+}
+
+// Smooth scroll effect ( for the links )
+function scrollNav() {  
+    const links = document.querySelectorAll('.main-nav a');
+
+    links.forEach( link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const sectionScroll = e.target.attributes.href.value;
+            const section = document.querySelector(sectionScroll);
+            section.scrollIntoView({ behavior: "smooth"});
+        });
+    });
 }
 
 function createGallery() {

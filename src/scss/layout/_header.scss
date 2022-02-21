@@ -7,6 +7,16 @@
     
     background-color: v.$blue;
 
+    @include m.tablet {
+        &.fixed-bar {
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem #333;
+        }
+    }
+
     h1 {
         color: v.$white;
         text-align: center;

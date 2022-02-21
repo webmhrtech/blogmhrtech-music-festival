@@ -405,6 +405,15 @@ img {
 .header {
   background-color: #666bff;
 }
+@media (min-width: 768px) {
+  .header.fixed-bar {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
 .header h1 {
   color: #ffffff;
   text-align: center;
@@ -668,17 +677,17 @@ img {
   cursor: pointer;
 }
 
-.tiquets {
+.tickets {
   padding: 5rem 0;
   background-color: #666bff;
 }
-.tiquets h3 {
+.tickets h3 {
   text-align: center;
   color: #ffffff;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .tiquets .container-tiquets {
+  .tickets .container-tickets {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
